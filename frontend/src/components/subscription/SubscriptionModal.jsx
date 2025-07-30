@@ -78,7 +78,7 @@ const SubscriptionModal = ({ isOpen, onClose, movieId }) => {
       }
 
       // Create order on your backend
-      const orderResponse = await fetch('http://localhost:3000/api/create-order', {
+      const orderResponse = await fetch('https://cinewave-backend.vercel.app/api/create-order', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -108,7 +108,7 @@ const SubscriptionModal = ({ isOpen, onClose, movieId }) => {
             console.log('Payment response received:', response);
             
             // Verify payment on your backend
-            const verifyResponse = await fetch('http://localhost:3000/api/verify-payment', {
+            const verifyResponse = await fetch('https://cinewave-backend.vercel.app/api/verify-payment', {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json',
